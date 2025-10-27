@@ -1,0 +1,80 @@
+<html>
+<head>
+<title>index.html</title>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<style type="text/css">
+.s0 { color: #d5b778;}
+.s1 { color: #bcbec4;}
+.s2 { color: #bababa;}
+.s3 { color: #6aab73;}
+.s4 { color: #cf8e6d;}
+</style>
+</head>
+<body bgcolor="#1e1f22">
+<table CELLSPACING=0 CELLPADDING=5 COLS=1 WIDTH="100%" BGCOLOR="#606060" >
+<tr><td><center>
+<font face="Arial, Helvetica" color="#000000">
+index.html</font>
+</center></td></tr></table>
+<pre><span class="s0">&lt;!DOCTYPE </span><span class="s2">html</span><span class="s0">&gt;</span>
+<span class="s0">&lt;html </span><span class="s2">lang</span><span class="s3">=&quot;ko&quot;</span><span class="s0">&gt;</span>
+  <span class="s0">&lt;head&gt;</span>
+    <span class="s0">&lt;meta </span><span class="s2">charset</span><span class="s3">=&quot;UTF-8&quot; </span><span class="s0">/&gt;</span>
+    <span class="s0">&lt;meta </span><span class="s2">name</span><span class="s3">=&quot;viewport&quot; </span><span class="s2">content</span><span class="s3">=&quot;width=device-width, initial-scale=1.0&quot; </span><span class="s0">/&gt;</span>
+    <span class="s0">&lt;title&gt;</span><span class="s1">중세국어 번역기</span><span class="s0">&lt;/title&gt;</span>
+    <span class="s0">&lt;link</span>
+      <span class="s2">rel</span><span class="s3">=&quot;stylesheet&quot;</span>
+      <span class="s2">as</span><span class="s3">=&quot;style&quot;</span>
+      <span class="s2">crossorigin</span>
+      <span class="s2">href</span><span class="s3">=&quot;https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.8/dist/web/variable/pretendardvariable.css&quot;</span>
+    <span class="s0">/&gt;</span>
+    <span class="s0">&lt;link </span><span class="s2">rel</span><span class="s3">=&quot;stylesheet&quot; </span><span class="s2">href</span><span class="s3">=&quot;style.css&quot; </span><span class="s0">/&gt;</span>
+  <span class="s0">&lt;/head&gt;</span>
+  <span class="s0">&lt;body&gt;</span>
+    <span class="s0">&lt;div </span><span class="s2">class</span><span class="s3">=&quot;container&quot;</span><span class="s0">&gt;</span>
+      <span class="s0">&lt;header </span><span class="s2">class</span><span class="s3">=&quot;header&quot;</span><span class="s0">&gt;</span>
+        <span class="s0">&lt;img </span><span class="s2">src</span><span class="s3">=&quot;AI-King.jpeg&quot; </span><span class="s2">alt</span><span class="s3">=&quot;Ai-King&quot; </span><span class="s2">class</span><span class="s3">=&quot;Ai-king&quot; </span><span class="s0">/&gt;</span>
+        <span class="s0">&lt;h1&gt;</span><span class="s1">중세국어 번역기</span><span class="s0">&lt;/h1&gt;</span>
+        <span class="s0">&lt;p&gt;</span><span class="s1">세종대왕과 함께하는 옛 한글 번역 여행</span><span class="s0">&lt;/p&gt;</span>
+      <span class="s0">&lt;/header&gt;</span>
+
+      <span class="s0">&lt;div </span><span class="s2">class</span><span class="s3">=&quot;translator-box&quot;</span><span class="s0">&gt;</span>
+        <span class="s0">&lt;label&gt;</span><span class="s1">중세국어</span><span class="s0">&lt;/label&gt;</span>
+        <span class="s0">&lt;textarea</span>
+          <span class="s2">id</span><span class="s3">=&quot;inputText&quot;</span>
+          <span class="s2">placeholder</span><span class="s3">=&quot;번역할 중세국어 문장을 입력하세요...&quot;</span>
+        <span class="s0">&gt;&lt;/textarea&gt;</span>
+
+        <span class="s0">&lt;label&gt;</span><span class="s1">현대국어</span><span class="s0">&lt;/label&gt;</span>
+        <span class="s0">&lt;textarea</span>
+          <span class="s2">id</span><span class="s3">=&quot;outputText&quot;</span>
+          <span class="s2">placeholder</span><span class="s3">=&quot;AI가 번역한 결과가 여기에 표시됩니다.&quot;</span>
+          <span class="s2">readonly</span>
+        <span class="s0">&gt;&lt;/textarea&gt;</span>
+
+        <span class="s0">&lt;div </span><span class="s2">class</span><span class="s3">=&quot;button-group&quot;</span><span class="s0">&gt;</span>
+          <span class="s0">&lt;button </span><span class="s2">onclick</span><span class="s3">=&quot;</span><span class="s1">translateText()</span><span class="s3">&quot;</span><span class="s0">&gt;</span><span class="s1">번역하기</span><span class="s0">&lt;/button&gt;</span>
+          <span class="s0">&lt;button </span><span class="s2">onclick</span><span class="s3">=&quot;</span><span class="s1">copyText()</span><span class="s3">&quot;</span><span class="s0">&gt;</span><span class="s1">복사</span><span class="s0">&lt;/button&gt;</span>
+        <span class="s0">&lt;/div&gt;</span>
+      <span class="s0">&lt;/div&gt;</span>
+      <span class="s0">&lt;p </span><span class="s2">class</span><span class="s3">=&quot;ai-sejong&quot;</span><span class="s0">&gt;</span><span class="s1">AI 세종</span><span class="s0">&lt;/p&gt;</span>
+    <span class="s0">&lt;/div&gt;</span>
+
+    <span class="s0">&lt;script&gt;</span>
+      <span class="s4">function </span><span class="s1">translateText() {</span>
+        <span class="s4">const </span><span class="s1">input = document.getElementById(</span><span class="s3">&quot;inputText&quot;</span><span class="s1">).value;</span>
+        <span class="s1">document.getElementById(</span><span class="s3">&quot;outputText&quot;</span><span class="s1">).value = input;</span>
+      <span class="s1">}</span>
+
+      <span class="s4">function </span><span class="s1">copyText() {</span>
+        <span class="s4">const </span><span class="s1">output = document.getElementById(</span><span class="s3">&quot;outputText&quot;</span><span class="s1">);</span>
+        <span class="s1">output.select();</span>
+        <span class="s1">document.execCommand(</span><span class="s3">&quot;copy&quot;</span><span class="s1">);</span>
+        <span class="s1">alert(</span><span class="s3">&quot;복사되었습니다!&quot;</span><span class="s1">);</span>
+      <span class="s1">}</span>
+    <span class="s0">&lt;/script&gt;</span>
+  <span class="s0">&lt;/body&gt;</span>
+<span class="s0">&lt;/html&gt;</span>
+</pre>
+</body>
+</html>
