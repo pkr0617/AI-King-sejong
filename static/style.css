@@ -51,8 +51,7 @@ body {
 }
 
 /* 왕관 이미지 */
-.Ai-king,
-.crown {
+.Ai-king {
   width: 90px;
   height: auto;
   margin-bottom: 0px;

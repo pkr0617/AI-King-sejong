@@ -10,12 +10,12 @@
       crossorigin
       href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.8/dist/web/variable/pretendardvariable.css"
     />
-    <link rel="stylesheet" href="style.css" />
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}" />
   </head>
   <body>
     <div class="container">
       <header class="header">
-        <img src="AI-King.jpeg" alt="Ai-King" class="Ai-king" />
+        <img src="{{ url_for('static', filename='AI-King.jpeg') }}" alt="Ai-King" class="Ai-king"/>
         <h1>중세국어 번역기</h1>
         <p>세종대왕과 함께하는 옛 한글 번역 여행</p>
       </header>
@@ -43,16 +43,23 @@
     </div>
 
     <script>
-      function translateText() {
-        const input = document.getElementById("inputText").value;
-        document.getElementById("outputText").value = input;
-      }
+      async function translateText() {
+  const input = document.getElementById("inputText").value;
 
+  const response = await fetch("http://127.0.0.1:5000/translate", {
+    method: "POST",
+    headers: { "Content-Type": "application/json" },
+    body: JSON.stringify({ text: input }),
+  });
+
+  const data = await response.json();
+  document.getElementById("outputText").value = data.result;
+}
       function copyText() {
-        const output = document.getElementById("outputText");
-        output.select();
+        const outputText = document.getElementById("outputText");
+        outputText.select();
         document.execCommand("copy");
-        alert("복사되었습니다!");
+        alert("번역된 텍스트가 복사되었습니다!");
       }
     </script>
   </body>
