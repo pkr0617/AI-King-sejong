@@ -5,7 +5,7 @@ from replace_old_jamo_dataset2 import load_mapping, replace_text
 from compose_hcj_to_hangul_dataset2 import compose_text
 from openai import OpenAI
 
-openai_api_key = ""
+openai_api_key = "https://github.com/pkr0617/AI-King-sejong/security/secret-scanning/unblock-secret/34xz13Lznux2MSZQG1pzcLbWcwo"
 client = OpenAI(api_key=openai_api_key)
 
 def gpt_translate(text):
