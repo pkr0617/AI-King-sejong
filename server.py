@@ -5,7 +5,7 @@ from replace_old_jamo_dataset2 import load_mapping, replace_text
 from compose_hcj_to_hangul_dataset2 import compose_text
 from openai import OpenAI
 
-openai_api_key = "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"
+openai_api_key = ""
 client = OpenAI(api_key=openai_api_key)
 
 def gpt_translate(text):
